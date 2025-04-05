@@ -20,7 +20,7 @@ if st.button("ダウンロード開始"):
                 # 出力パスを指定（mp4）
                 output_path = os.path.join(tmpdir, '%(title)s.%(ext)s')
                 ydl_opts = {
-                    'format': 'bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+                    'format': 'best[ext=mp4]/best',
                     'outtmpl': output_path,
                     'noplaylist': True,
                     'quiet': True,
