@@ -16,10 +16,10 @@ if st.button("ダウンロード開始"):
 
         desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
         ydl_opts = {
-            'format': 'bv*+ba/b',
-            'outtmpl': os.path.join(desktop_path, '%(title)s.%(ext)s'),
-            'merge_output_format': 'mp4',
+            'format': 'best[ext=mp4]/best',
+            'outtmpl': os.path.join("downloads", '%(title)s.%(ext)s'),  # サーバー内に保存する例
             'noplaylist': True,
+            'quiet': False,
         }
 
         try:
